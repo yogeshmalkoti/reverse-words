@@ -39,7 +39,7 @@ var (
 	)
 )
 
-const version = "v0.0.27"
+const version = "v0.0.28"
 
 // ReturnRelease returns the release configured by the user
 func ReturnRelease(w http.ResponseWriter, r *http.Request) {
@@ -148,7 +148,7 @@ func getEnv(varName, defaultValue string) string {
 func main() {
 	release := getEnv("RELEASE", "NotSet")
 	port := getEnv("APP_PORT", "8080")
-	log.Println("Starting the New Reverse Api", version, "Release:", release)
+	log.Println("Starting final Reverse Api", version, "Release:", release)
 	// Custom registry, this will be used by the /metrics endpoint and will only show the app metrics
 	registry := prometheus.NewRegistry()
 	// Add our custom registers to our custom registry
